@@ -1,0 +1,87 @@
+/* ============
+interactive fields
+============ */
+
+/* product feature */
+#feature {
+width: 156px;
+height: 107px;
+background-color: $p1;
+border-radius: 9px;
+color: $v5;
+
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+text-align: center;
+h3{
+    font-size: 14pt;
+    font-weight: 300;
+    line-height: 0%;
+}
+h4{
+    font-size: 10pt;
+    font-weight: 100;
+    line-height: 0px;
+    margin-top: 0px;
+}
+>div{
+    border-radius: 0px 0px 9px 9px;
+    height: 60px;
+}
+#f1{
+    background-color: red;
+}
+#f2{
+    background-color: yellow;
+}
+#f3{
+    background-color: green;
+}
+#f4{
+    background-color: paleturquoise;
+}
+/* product feature desktop*/
+@include md {
+    width: 422px;
+    height: 289px;  
+    border-radius: 25px;
+    h3{
+        font-size: 32pt;
+    }
+    h4{
+        font-size: 16pt;
+    }
+    >div{
+        border-radius: 0px 0px 25px 25px;
+        height: 163px;
+    }
+}
+}
+
+/* LEFT review */
+.rleft{
+    display: flex;
+    flex-direction: row;
+    #rleft {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        /* review desktop*/
+        
+        }
+}
+
+.rright {
+    display: flex;
+    flex-direction: row-reverse;
+            /* RIGHT review */
+            #rright {
+                display: flex;
+        flex-direction: column;
+        text-align: right;
+                /* review desktop*/
+                
+                }
+}
+    

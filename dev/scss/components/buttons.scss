@@ -1,0 +1,52 @@
+/* ============
+buttons!
+============ */
+
+@mixin button{
+padding: 10px 16px;
+border-radius: 6px;
+font-family: 'Avenir';
+font-size: 16pt;
+font-weight: 200;
+text-decoration: none;
+background-color: $p2;
+color: $v5;
+border-style: solid;
+border-color: $p2;
+
+&:hover {
+    background-color: $p3;
+    border-color: $p3;
+    transition: .1s;
+}
+&:active {
+    background-color: $v5;
+    border-color: $v2;
+    color: $v2;
+}
+@if (class == paypal) {
+    background-color: paleturquoise;
+    color: $p1;
+    border-style: none;
+    
+    &:hover {
+        background-color: paleturquoise;
+        transition: .1s;
+        border-style: solid;
+        border-color: cornflowerblue;
+    }
+    &:active {
+        background-color: cornflowerblue;
+        color: $v5;
+        border-style: none;
+
+    } 
+}
+
+}
+a.button {
+    @include button;
+    }
+    a.paypal {
+        @include button;
+        }

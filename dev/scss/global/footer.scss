@@ -1,0 +1,27 @@
+footer {
+    background-color: $p1;
+    display: grid;
+    grid-template-columns: auto;
+    padding: 8px 32px;
+
+    .flinks{
+        border-style: solid;
+        border-color: transparent $v5;
+        display: flex;
+        flex-direction: horizontal;
+        justify-content: space-between;
+        padding: 0px 32px;
+       h6, p {
+        font-size: x-small;
+        color: $v5;
+        margin: inherit;
+       }
+    }
+    .ficons {
+        list-style: none;
+        display: flex;
+        flex-direction: horizontal;
+        justify-content: center;   
+        gap: 4px;
+    }
+}

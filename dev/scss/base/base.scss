@@ -1,0 +1,14 @@
+body {
+    background-color: $v5;
+    font-family: 'Avenir';
+    color: $p1;
+    text-align: center;
+.wrapperv {
+    display:flex;
+    flex-direction: column;
+}
+.wrapperh {
+    display:flex;
+    flex-direction: row;
+}
+}

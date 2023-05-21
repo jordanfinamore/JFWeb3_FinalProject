@@ -1,0 +1,249 @@
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 200;
+}
+
+body {
+  background-color: #FEFEFE;
+  font-family: "Avenir";
+  color: #1B4358;
+  text-align: center;
+}
+body .wrapperv {
+  display: flex;
+  flex-direction: column;
+}
+body .wrapperh {
+  display: flex;
+  flex-direction: row;
+}
+
+/* ============
+buttons!
+============ */
+a.button {
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-family: "Avenir";
+  font-size: 16pt;
+  font-weight: 200;
+  text-decoration: none;
+  background-color: #357886;
+  color: #FEFEFE;
+  border-style: solid;
+  border-color: #357886;
+}
+a.button:hover {
+  background-color: #4E8A79;
+  border-color: #4E8A79;
+  transition: 0.1s;
+}
+a.button:active {
+  background-color: #FEFEFE;
+  border-color: #656565;
+  color: #656565;
+}
+
+a.paypal {
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-family: "Avenir";
+  font-size: 16pt;
+  font-weight: 200;
+  text-decoration: none;
+  background-color: #357886;
+  color: #FEFEFE;
+  border-style: solid;
+  border-color: #357886;
+}
+a.paypal:hover {
+  background-color: #4E8A79;
+  border-color: #4E8A79;
+  transition: 0.1s;
+}
+a.paypal:active {
+  background-color: #FEFEFE;
+  border-color: #656565;
+  color: #656565;
+}
+
+/* ============
+interactive fields
+============ */
+/* product feature */
+#feature {
+  width: 156px;
+  height: 107px;
+  background-color: #1B4358;
+  border-radius: 9px;
+  color: #FEFEFE;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  /* product feature desktop*/
+}
+#feature h3 {
+  font-size: 14pt;
+  font-weight: 300;
+  line-height: 0%;
+}
+#feature h4 {
+  font-size: 10pt;
+  font-weight: 100;
+  line-height: 0px;
+  margin-top: 0px;
+}
+#feature > div {
+  border-radius: 0px 0px 9px 9px;
+  height: 60px;
+}
+#feature #f1 {
+  background-color: red;
+}
+#feature #f2 {
+  background-color: yellow;
+}
+#feature #f3 {
+  background-color: green;
+}
+#feature #f4 {
+  background-color: paleturquoise;
+}
+@media (min-width: 800px) {
+  #feature {
+    width: 422px;
+    height: 289px;
+    border-radius: 25px;
+  }
+  #feature h3 {
+    font-size: 32pt;
+  }
+  #feature h4 {
+    font-size: 16pt;
+  }
+  #feature > div {
+    border-radius: 0px 0px 25px 25px;
+    height: 163px;
+  }
+}
+
+/* LEFT review */
+.rleft {
+  display: flex;
+  flex-direction: row;
+}
+.rleft #rleft {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  /* review desktop*/
+}
+
+.rright {
+  display: flex;
+  flex-direction: row-reverse;
+  /* RIGHT review */
+}
+.rright #rright {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  /* review desktop*/
+}
+
+header {
+  position: sticky;
+  height: 52px;
+}
+header ul {
+  list-style: none;
+  background-color: #1B4358;
+  display: flex;
+  flex-direction: horizontal;
+  justify-content: space-between;
+  padding: 16px 16px 0px;
+}
+header ul a {
+  color: #FEFEFE;
+  font-weight: 700;
+  text-decoration: none;
+}
+header ul a img {
+  height: 36px;
+}
+header ul a:hover {
+  text-decoration: underline;
+  text-decoration-color: #FEFEFE;
+}
+header ul a:active {
+  text-decoration: underline;
+  color: #4E8A79;
+  text-decoration-color: #4E8A79;
+}
+
+footer {
+  background-color: #1B4358;
+  display: grid;
+  grid-template-columns: auto;
+  padding: 8px 32px;
+}
+footer .flinks {
+  border-style: solid;
+  border-color: transparent #FEFEFE;
+  display: flex;
+  flex-direction: horizontal;
+  justify-content: space-between;
+  padding: 0px 32px;
+}
+footer .flinks h6, footer .flinks p {
+  font-size: x-small;
+  color: #FEFEFE;
+  margin: inherit;
+}
+footer .ficons {
+  list-style: none;
+  display: flex;
+  flex-direction: horizontal;
+  justify-content: center;
+  gap: 4px;
+}
+
+/* =============
+    Scripts
+============= */
+.hero {
+  height: 1024px;
+  padding-top: 240px;
+  background-image: url("../media/hero.png");
+  background-size: cover;
+  background-repeat: none;
+  background-position: center;
+}
+.hero h1 {
+  margin: 24px;
+}
+.hero h2 {
+  margin: 24px;
+  margin-bottom: 48px;
+}
+
+.product {
+  background-image: linear-gradient(#AED8A9, #FEFEFE, #FEFEFE, #FEFEFE, #FEFEFE, #FEFEFE, #FEFEFE, #FEFEFE, #FEFEFE, #FEFEFE, #FEFEFE);
+  background-position: 0px -10px;
+  padding-top: 224px;
+}
+
+.wrap {
+  height: 640px;
+  padding-top: 240px;
+}
+.wrap h2 {
+  margin-top: 24px;
+  margin-bottom: 84px;
+}
