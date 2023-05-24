@@ -13,6 +13,7 @@ body {
   font-family: "Avenir";
   color: #1B4358;
   text-align: center;
+  margin: 0px;
 }
 body .wrapperv {
   display: flex;
@@ -56,27 +57,28 @@ a.paypal {
   font-size: 16pt;
   font-weight: 200;
   text-decoration: none;
-  background-color: #357886;
-  color: #FEFEFE;
+  background-color: #B2E1F3;
+  color: #0D3883;
   border-style: solid;
-  border-color: #357886;
+  border-color: #B2E1F3;
 }
 a.paypal:hover {
-  background-color: #4E8A79;
-  border-color: #4E8A79;
+  background-color: #B2E1F3;
   transition: 0.1s;
+  border-style: solid;
+  border-color: #0D3883;
 }
 a.paypal:active {
-  background-color: #FEFEFE;
-  border-color: #656565;
-  color: #656565;
+  background-color: #0D3883;
+  color: #FEFEFE;
+  border-style: none;
 }
 
 /* ============
 interactive fields
 ============ */
 /* product feature */
-#feature {
+.feature {
   width: 156px;
   height: 107px;
   background-color: #1B4358;
@@ -88,73 +90,49 @@ interactive fields
   text-align: center;
   /* product feature desktop*/
 }
-#feature h3 {
+.feature h3 {
   font-size: 14pt;
   font-weight: 300;
   line-height: 0%;
 }
-#feature h4 {
-  font-size: 10pt;
+.feature h4 {
+  font-size: 8pt;
   font-weight: 100;
   line-height: 0px;
   margin-top: 0px;
 }
-#feature > div {
+.feature > div {
   border-radius: 0px 0px 9px 9px;
   height: 60px;
 }
-#feature #f1 {
-  background-color: red;
+.feature #f1 {
+  background-image: url("../media/ft1.png");
 }
-#feature #f2 {
-  background-color: yellow;
+.feature #f2 {
+  background-image: url("../media/ft2.png");
 }
-#feature #f3 {
-  background-color: green;
+.feature #f3 {
+  background-image: url("../media/ft3.png");
 }
-#feature #f4 {
-  background-color: paleturquoise;
+.feature #f4 {
+  background-image: url("../media/ft4.png");
 }
 @media (min-width: 800px) {
-  #feature {
+  .feature {
     width: 422px;
     height: 289px;
     border-radius: 25px;
   }
-  #feature h3 {
+  .feature h3 {
     font-size: 32pt;
   }
-  #feature h4 {
+  .feature h4 {
     font-size: 16pt;
   }
-  #feature > div {
+  .feature > div {
     border-radius: 0px 0px 25px 25px;
     height: 163px;
   }
-}
-
-/* LEFT review */
-.rleft {
-  display: flex;
-  flex-direction: row;
-}
-.rleft #rleft {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  /* review desktop*/
-}
-
-.rright {
-  display: flex;
-  flex-direction: row-reverse;
-  /* RIGHT review */
-}
-.rright #rright {
-  display: flex;
-  flex-direction: column;
-  text-align: right;
-  /* review desktop*/
 }
 
 header {
@@ -218,32 +196,194 @@ footer .ficons {
     Scripts
 ============= */
 .hero {
-  height: 1024px;
-  padding-top: 240px;
-  background-image: url("../media/hero.png");
-  background-size: cover;
+  height: 884px;
+  padding-top: 72px;
+  background-image: url("..deploy/media/mobilehero.png");
+  background-size: 100%;
   background-repeat: none;
-  background-position: center;
+  background-position: left, right;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .hero h1 {
-  margin: 24px;
+  margin: 12px;
+  margin-right: 10%;
+  width: 300px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
 }
 .hero h2 {
-  margin: 24px;
-  margin-bottom: 48px;
+  margin: 12px;
+  margin-top: 260px;
+  width: 300px;
+  text-align: center;
+  margin-left: -240px;
+}
+.hero a {
+  margin-left: -260px;
+}
+@media (min-width: 800px) {
+  .hero {
+    height: 1024px;
+    padding-top: 240px;
+    background-image: url("../media/hero.png");
+    background-size: cover;
+    background-repeat: none;
+    background-position: center;
+  }
+  .hero h2 {
+    margin-left: 12px;
+  }
+  .hero a {
+    margin-left: 0px;
+  }
+  .hero h1 {
+    margin: 12px;
+    margin-right: 12px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    align-self: center;
+  }
+  .hero h2 {
+    margin-top: 12px;
+    margin-bottom: 64px;
+    width: 100%;
+  }
 }
 
 .product {
   background-image: linear-gradient(#AED8A9, #FEFEFE, #FEFEFE, #FEFEFE, #FEFEFE, #FEFEFE, #FEFEFE, #FEFEFE, #FEFEFE, #FEFEFE, #FEFEFE);
   background-position: 0px -10px;
+  background-size: 110%;
   padding-top: 224px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "prodt prodt" "bigred ftgrid";
+}
+.product h1 {
+  grid-area: prodt;
+  width: 200%;
+  font-size: 30px;
+  text-align: left;
+}
+.product img {
+  grid-area: bigred;
+}
+.product .ftgrid {
+  grid-area: ftgrid;
+  display: flex;
+  width: 156px;
+  flex-direction: column;
+  gap: 32px;
+}
+@media (min-width: 800px) {
+  .product {
+    grid-template-columns: 30% 50%;
+    grid-template-areas: "bigred prodt" "bigred ftgrid";
+    padding: 5%;
+  }
+  .product h1 {
+    width: 100%;
+    font-size: 40px;
+  }
+  .product img {
+    margin-top: 10%;
+  }
+  .product .ftgrid {
+    display: grid;
+    grid-template-columns: 422px 422px;
+    grid-template-rows: 50% 50%;
+    align-content: center;
+  }
+}
+@media (min-width: 1440px) {
+  .product {
+    padding: 10%;
+  }
+  .product img {
+    width: 100%;
+  }
+}
+
+.reviews {
+  background-color: #FEFEFE;
+  color: #AED8A9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 120px;
+  /* LEFT review */
+}
+.reviews .rleft {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  justify-content: space-between;
+}
+.reviews .rleft #rleft {
+  width: fit-content;
+  margin: 0px;
+  padding: 12px;
+  padding-top: 0px;
+  padding-right: 184px;
+  background-color: #1B4358;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  /* review desktop*/
+}
+.reviews .rright {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 60%;
+  justify-content: space-between;
+  /* RIGHT review */
+}
+.reviews .rright #rright {
+  width: fit-content;
+  margin: 0px;
+  padding: 12px;
+  padding-top: 0px;
+  padding-left: 184px;
+  background-color: #1B4358;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  /* review desktop*/
 }
 
 .wrap {
+  background-image: linear-gradient(#FEFEFE, #FEFEFE, #FEFEFE, #AED8A9);
+  background-position: -30px;
+  background-size: 140%;
   height: 640px;
   padding-top: 240px;
 }
 .wrap h2 {
+  width: 80%;
+  margin-left: 10%;
   margin-top: 24px;
   margin-bottom: 84px;
+}
+
+.hero {
+  height: 884px;
+  padding-top: 72px;
+  background-image: linear-gradient(#FEFEFE, #FEFEFE, #FEFEFE, #AED8A9);
+  background-position: -30px;
+  background-size: 140%;
+  background-repeat: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 800px) {
+  .hero {
+    height: 1024px;
+    padding-top: 240px;
+  }
 }

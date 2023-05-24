@@ -2,7 +2,7 @@
 buttons!
 ============ */
 
-@mixin button{
+@mixin button(){
 padding: 10px 16px;
 border-radius: 6px;
 font-family: 'Avenir';
@@ -24,29 +24,33 @@ border-color: $p2;
     border-color: $v2;
     color: $v2;
 }
-@if (class == paypal) {
-    background-color: paleturquoise;
-    color: $p1;
-    border-style: none;
-    
-    &:hover {
-        background-color: paleturquoise;
-        transition: .1s;
-        border-style: solid;
-        border-color: cornflowerblue;
-    }
-    &:active {
-        background-color: cornflowerblue;
-        color: $v5;
-        border-style: none;
-
-    } 
-}
 
 }
 a.button {
-    @include button;
+    @include button();
     }
-    a.paypal {
-        @include button;
+a.paypal {
+    padding: 10px 16px;
+border-radius: 6px;
+font-family: 'Avenir';
+font-size: 16pt;
+font-weight: 200;
+text-decoration: none;
+background-color: $pp;
+color: $pt;
+border-style: solid;
+border-color: $pp;
+        
+        &:hover {
+            background-color: $pp;
+            transition: .1s;
+            border-style: solid;
+            border-color: $pt;
         }
+        &:active {
+            background-color: $pt;
+            color: $v5;
+            border-style: none;
+    
+        } 
+}

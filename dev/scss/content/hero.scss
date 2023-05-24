@@ -1,16 +1,60 @@
 .hero{
+    height: 884px;
+    padding-top: 72px;
+    background-image: url("..deploy/media/mobilehero.png");
+    background-size: 100%;
+    background-repeat: none;
+    background-position: left, right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1{
+        margin: 12px;
+        margin-right: 10%;
+        width: 300px;
+        text-align: center;
+
+        display: flex;
+        flex-direction: row;
+        align-self: flex-end;
+    }
+
+    h2{
+        margin: 12px;
+        margin-top: 260px;
+        width: 300px;
+        text-align: center;
+        margin-left: -240px;
+    }
+    a{
+        margin-left: -260px;
+    }
+@include md{
     height: 1024px;
     padding-top: 240px;
     background-image: url("../media/hero.png");
     background-size: cover;
     background-repeat: none;
     background-position: center;
+h2{
+        margin-left: 12px;
+    }
+    a{
+        margin-left: 0px; 
+    }
     h1{
-        margin: 24px;
+        margin: 12px;
+        margin-right: 12px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 100%;
+        align-self: center;
     }
 
     h2{
-        margin: 24px;
-        margin-bottom: 48px;
+        margin-top: 12px;
+        margin-bottom: 64px;
+        width: 100%;
     }
+}
 }

@@ -1,7 +1,13 @@
 .wrap{
+    background-image: linear-gradient($v5, $v5, $v5, $p4);
+    background-position: -30px;
+    background-size: 140%;
+
     height: 640px;
     padding-top: 240px;
     h2{
+        width: 80%;
+        margin-left: 10%;
         margin-top: 24px;
         margin-bottom: 84px;
     }

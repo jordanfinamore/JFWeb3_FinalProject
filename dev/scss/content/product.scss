@@ -1,5 +1,53 @@
 .product{
    background-image: linear-gradient($p4, $v5, $v5, $v5, $v5, $v5, $v5, $v5, $v5, $v5, $v5);
    background-position: 0px -10px;
+   background-size: 110%;
    padding-top: 224px;
+   display: grid;
+   grid-template-columns: 50% 50%;
+   grid-template-areas:
+   "prodt prodt"
+   "bigred ftgrid";
+   h1{
+      grid-area: prodt;
+   width: 200%;
+   font-size: 30px;
+   text-align: left;
+   }
+   img{
+      grid-area: bigred;
+   }
+   .ftgrid {
+      grid-area: ftgrid;
+      display: flex;
+      width: 156px;
+      flex-direction: column;
+      gap: 32px;
+         }
+   @include md{
+grid-template-columns: 30% 50%;
+grid-template-areas:
+"bigred prodt"
+"bigred ftgrid";
+padding: 5%;
+      h1{
+         width: 100%;
+         font-size: 40px;
+         }
+         img{
+            margin-top: 10%;
+         }
+      .ftgrid {
+   display: grid;
+   grid-template-columns: 422px 422px;
+   grid-template-rows: 50% 50%;
+   align-content: center;
+      }
+   }
+   @include lg {
+      padding: 10%;
+      img{
+         width: 100%;
+      }
+   }
 }
