@@ -13,15 +13,18 @@
    width: 200%;
    font-size: 30px;
    text-align: left;
+   margin-left: 64px;
    }
    img{
       grid-area: bigred;
+      width: 260px;
    }
    .ftgrid {
       grid-area: ftgrid;
       display: flex;
       width: 156px;
       flex-direction: column;
+      justify-content: left;
       gap: 32px;
          }
    @include md{
@@ -33,21 +36,33 @@ padding: 5%;
       h1{
          width: 100%;
          font-size: 40px;
+         margin-left: 0px;
          }
          img{
-            margin-top: 10%;
+            margin-top: 80%;
+            margin-left: -30%;
+            width: 120%;
          }
-      .ftgrid {
-   display: grid;
-   grid-template-columns: 422px 422px;
-   grid-template-rows: 50% 50%;
-   align-content: center;
-      }
+         .ftgrid {
+            display: grid;
+            grid-template-columns: 422px 422px;
+            grid-template-rows: 50% 50%;
+            align-content: center;
+               }
+
    }
    @include lg {
       padding: 10%;
       img{
+         margin-top: 10%;
+         margin-left: 0%;
          width: 100%;
       }
+      .ftgrid {
+         display: grid;
+         grid-template-columns: 422px 422px;
+         grid-template-rows: 50% 50%;
+         align-content: center;
+            }
    }
 }

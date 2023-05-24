@@ -314,6 +314,22 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
+    "\/deploy\/p2.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/p2.html",
+      "oF" : 0
+    },
+    "\/deploy\/p3.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/p3.html",
+      "oF" : 0
+    },
     "\/dev\/content\/p1\/hero.kit" : {
       "cB" : 0,
       "ft" : 2048,
@@ -440,16 +456,16 @@
       "ft" : 2048,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/dev\/p2.html",
-      "oF" : 0
+      "oAP" : "\/deploy\/p2.html",
+      "oF" : 2
     },
     "\/dev\/p3.kit" : {
       "cB" : 0,
       "ft" : 2048,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/dev\/p3.html",
-      "oF" : 0
+      "oAP" : "\/deploy\/p3.html",
+      "oF" : 3
     },
     "\/dev\/scss\/base\/base.scss" : {
       "aP" : 0,
