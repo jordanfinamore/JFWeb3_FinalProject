@@ -1,29 +1,36 @@
 header {
     height: 52px;
+    width: 100%;
+    position: fixed;
     ul {
     list-style: none;
     background-color: $p1;
     display: flex;
     flex-direction: horizontal;
     justify-content: space-between;
+    align-content: flex-end;
     margin: 0px;
-    padding: 16px 16px 0px 16px;
-    a{
-        img{
-            height: 36px;
+    padding: 16px;
+    padding-bottom: 0px;
+    li{
+        
+        a{
+            img{
+                height: 36px;
+            }
+            color: $v5;
+            font-weight: 700;
+            text-decoration: none;
         }
-        color: $v5;
-        font-weight: 700;
-        text-decoration: none;
+        a:hover {
+            text-decoration: underline;
+            text-decoration-color: $v5;
+            }
+            a:active {
+             text-decoration: underline;
+             color: $p3;
+             text-decoration-color: $p3;
+            }
     }
-    a:hover {
-        text-decoration: underline;
-        text-decoration-color: $v5;
-        }
-        a:active {
-         text-decoration: underline;
-         color: $p3;
-         text-decoration-color: $p3;
-        }
 }
 }

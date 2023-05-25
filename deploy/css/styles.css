@@ -137,6 +137,8 @@ interactive fields
 
 header {
   height: 52px;
+  width: 100%;
+  position: fixed;
 }
 header ul {
   list-style: none;
@@ -144,22 +146,24 @@ header ul {
   display: flex;
   flex-direction: horizontal;
   justify-content: space-between;
+  align-content: flex-end;
   margin: 0px;
-  padding: 16px 16px 0px 16px;
+  padding: 16px;
+  padding-bottom: 0px;
 }
-header ul a {
+header ul li a {
   color: #FEFEFE;
   font-weight: 700;
   text-decoration: none;
 }
-header ul a img {
+header ul li a img {
   height: 36px;
 }
-header ul a:hover {
+header ul li a:hover {
   text-decoration: underline;
   text-decoration-color: #FEFEFE;
 }
-header ul a:active {
+header ul li a:active {
   text-decoration: underline;
   color: #4E8A79;
   text-decoration-color: #4E8A79;
