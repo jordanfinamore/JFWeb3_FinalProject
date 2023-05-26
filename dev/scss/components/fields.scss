@@ -58,4 +58,34 @@ h4{
     }
 }
 }
-    
+/* triangles */
+.rend{
+    width: 0;
+height: 0;
+border-style: solid;
+border-width: 0 0 120px 72px;
+border-color: transparent transparent $p1 transparent;
+margin-right: 0px;
+padding-right: 0px;
+@include md {
+    border-width: 0 0 180px 108px;
+}
+@include lg {
+    border-width: 0 0 240px 144px;
+}
+}
+.lend{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 120px 72px 0 0;
+    border-color: $p1 transparent transparent transparent;
+    margin-left: 0px;
+padding-left: 0px;
+@include md {
+    border-width: 180px 108px 0 0;
+}
+@include lg {
+    border-width: 240px 144px 0 0;   
+}
+}

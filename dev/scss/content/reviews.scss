@@ -1,52 +1,116 @@
-@include lg{
-    .reviews{
+.reviews{
     background-color: $v5;
-    padding-top: 224px;
     color: $p4;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 224px;
     gap: 120px;
+    img{
+        height: 120px;
+        width: height;
+    }
+    h1{
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 0px;
+        }
+        p{
+            font-size: 14pt;
+            font-weight: 50;
+            color: $p4;
+            img{
+height: 14px;
+padding-left: 40%;
+            }
+        }
+    .rleft{
+        display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: space-between;
+#rleft {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background-color: $p1;
+    padding: 0px;
+    padding-left: 12px;
+}
+    }
 
+    .rright{
+            display: flex;
+    flex-direction: row-reverse;    
+    width: 90%;
+    justify-content: space-between;
+#rright {
+    background-color: $p1;
+    display: flex;
+flex-direction: column;
+text-align: right;
+padding: 0px 12px;   
+}
+    }
+    @include md{
+        img{
+            height: 144px;
+            width: height;
+        }
+        .rleft, .rright {
+            width: 75%;
+            p{
+                margin-top: 64px;
+                font-size: 16pt;
+                weight: normal;
+                img{
+                    height: 21px;
+                    padding-left: 20%;
+                                }
+            }
+        }
+    }
+}
+@include lg{
+    .reviews{
+    padding-top: 224px;
+    gap: 120px;
+    img{
+        height: 100%;
+        width: height;
+    }
+    h1{
+        font-size: 40px;
+        margin-bottom: auto;
+        }
+        p{
+            font-size: 18pt;
+            weight: normal;
+            img{
+                height: 28px;
+                padding-left: 40%;
+                            }
+        }
 /* LEFT review */
 .rleft{
-    display: flex;
-    flex-direction: row;
-    width: 60%;
-    justify-content: space-between;
+
+    width: 65%;
     #rleft {
         width: fit-content;
         margin: 0px;
-        padding: 12px;
+        padding: 24px;
         padding-top: 0px;
-        padding-right: 184px;
-        background-color: $p1;
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-        /* review desktop*/
-        
         }
 }
 
 .rright {
-    display: flex;
-    flex-direction: row-reverse;    
-    width: 60%;
-    justify-content: space-between;
+    width: 65%;
             /* RIGHT review */
             #rright {
                 width: fit-content;
                 margin: 0px;
-                padding: 12px;
+                padding: 24px;
                 padding-top: 0px;
-                padding-left: 184px;
-                background-color: $p1;
-                display: flex;
-        flex-direction: column;
-        text-align: right;
-                /* review desktop*/
-                
                 }
 }
 }

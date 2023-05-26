@@ -8,20 +8,59 @@ footer {
         border-style: solid;
         border-color: transparent $v5;
         display: flex;
-        flex-direction: horizontal;
+        flex-direction: row;
         justify-content: space-between;
         padding: 0px 32px;
        h6, p {
         font-size: x-small;
         color: $v5;
         margin: inherit;
+        text-align: left;
        }
     }
     .ficons {
         list-style: none;
         display: flex;
-        flex-direction: horizontal;
-        justify-content: center;   
-        gap: 4px;
+        flex-direction: row;
+        justify-content: center; 
+        gap: 8px;
+        padding-left: 0px;
+        img{
+        height: 24px;
+        }
+    }
+    @include md {
+        padding: 12px 48px;
+        .flinks{
+        gap: 10%;
+        justify-content: center;
+        h6, p{
+            font-size: small;
+           }
+        }
+        .ficons{
+            gap: 12px;
+            padding-left: 4px;
+            img{
+            height: 30px;
+            } 
+        }
+    }
+
+    @include lg {
+        padding: 16px 64px;
+        .flinks{
+        gap: 20%;
+            h6, p {
+            font-size: small;
+           }
+        }
+        .ficons{
+            gap: 16px;
+            padding-left: 8px;
+            img{
+            height: 32px;
+            } 
+        }
     }
 }

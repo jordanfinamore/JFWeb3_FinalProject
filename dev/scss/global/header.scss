@@ -8,18 +8,34 @@ header {
     display: flex;
     flex-direction: horizontal;
     justify-content: space-between;
-    align-content: flex-end;
     margin: 0px;
-    padding: 16px;
-    padding-bottom: 0px;
+    padding: 8px 16px;
+    @include md{
+        padding: 12px 32px;
+    }
+    @include lg{
+        padding: 16px 64px;
+}
     li{
-        
+        p {
+            opacity: 0;
+            letter-spacing: -5px;
+            @include md{
+                letter-spacing: 10px;
+            }
+            @include lg{
+                letter-spacing: 30px;
+        }
+        }
+        align-self: center;
         a{
             img{
-                height: 36px;
+                height: 24px;
+                align-self: flex-end;
             }
             color: $v5;
             font-weight: 700;
+            font-size: 14pt;
             text-decoration: none;
         }
         a:hover {
