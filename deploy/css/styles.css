@@ -117,6 +117,12 @@ interactive fields
 .feature #f4 {
   background-image: url("../media/ft4.png");
 }
+.feature #o1 {
+  background-image: url("../media/oft1.png");
+}
+.feature #o2 {
+  background-image: url("../media/oft2.png");
+}
 @media (min-width: 800px) {
   .feature {
     width: 422px;
