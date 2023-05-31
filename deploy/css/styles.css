@@ -596,6 +596,14 @@ footer .ficons img {
   line-height: normal;
   margin: 0;
 }
+#options form label {
+  border-color: #357886;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 6px;
+  padding: 12px;
+  width: 100%;
+}
 
 #checkout {
   display: flex;
