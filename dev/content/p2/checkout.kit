@@ -2,9 +2,9 @@
    <div class="check"  id="c1">
     <h2>Payment information</h2>
     <form>
-        <input type="text" placeholder="0000 0000 0000 0000 0000">
-        <input type="text" placeholder="00/0000">
-        <input type="text" placeholder="000">
+        <input type="text" placeholder="Card number" pattern="[0-9]{4}" maxlength="16">
+        <input type="month" placeholder="Expiration date">
+        <input type="text" placeholder="Security code" pattern="[0-9]{3}" maxlength="3">
         <a class="paypal" href="#">Pay with <img src="media/paypal.png" alt="PayPal"></a>
     </form>
    </div>
@@ -19,7 +19,7 @@
    <div class="check"  id="c3">
     <h2>Shipping address</h2>
     <form>
-        <input type="text" placeholder="16987 Street Address Boulevard">
+        <input type="text" placeholder="Street address">
         <input type="text" placeholder="Apartment (optional)">
         <input type="text" placeholder="City of residence">
         <input type="text" placeholder="State/province">
@@ -30,7 +30,7 @@
    <div class="check"  id="c4">
     <h2>Billing address</h2>
     <form>
-        <input type="text" placeholder="16987 Street Address Boulevard">
+        <input type="text" placeholder="Street address">
         <input type="text" placeholder="Apartment (optional)">
         <input type="text" placeholder="City of residence">
         <input type="text" placeholder="State/province">

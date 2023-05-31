@@ -28,6 +28,8 @@ h4{
 >div{
     border-radius: 0px 0px 9px 9px;
     height: 60px;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 #f1{
     background-image: url("../media/ft1.png");
@@ -95,3 +97,19 @@ padding-left: 0px;
     border-width: 240px 144px 0 0;   
 }
 }
+/* forms */
+@mixin formfill {
+    border-color: $p2;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 6px;
+    padding: 12px;
+    width: 100%;
+}
+@mixin placeholder {
+    color: $p1;
+    font-family: Avenir;
+    font-weight: 100;
+    font-size: 14pt;
+    text-align: center;
+    }

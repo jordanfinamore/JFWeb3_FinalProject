@@ -1,3 +1,17 @@
 #options {
-    
+    padding: 16px;
+    padding-top: 60px;
+    display: grid;
+    grid-template-columns: 1;
+    gap: 8px;
+    h1{
+        text-align: left;
+        width: 80%;
+    }
+    .feature {
+        h3, h4{
+            line-height: normal;
+            margin: 0;
+        }
+    }
 }

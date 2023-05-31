@@ -51,16 +51,23 @@ a.button:active {
 }
 
 a.paypal {
-  padding: 10px 16px;
+  padding: 6px;
+  padding-bottom: 4px;
   border-radius: 6px;
   font-family: "Avenir";
-  font-size: 16pt;
+  font-size: 14pt;
   font-weight: 200;
+  line-height: 12px;
+  width: 50%;
   text-decoration: none;
-  background-color: #B2E1F3;
+  background-color: #FEFEFE;
   color: #0D3883;
   border-style: solid;
-  border-color: #B2E1F3;
+  border-color: #0D3883;
+  border-width: 2px;
+}
+a.paypal img {
+  height: 28px;
 }
 a.paypal:hover {
   background-color: #B2E1F3;
@@ -69,9 +76,8 @@ a.paypal:hover {
   border-color: #0D3883;
 }
 a.paypal:active {
-  background-color: #0D3883;
-  color: #FEFEFE;
-  border-style: none;
+  background-color: #B2E1F3;
+  border-color: #B2E1F3;
 }
 
 /* ============
@@ -104,6 +110,8 @@ interactive fields
 .feature > div {
   border-radius: 0px 0px 9px 9px;
   height: 60px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .feature #f1 {
   background-image: url("../media/ft1.png");
@@ -182,6 +190,7 @@ interactive fields
   }
 }
 
+/* forms */
 header {
   height: 52px;
   width: 100%;
@@ -570,6 +579,74 @@ footer .ficons img {
   margin-left: 10%;
   margin-top: 24px;
   margin-bottom: 84px;
+}
+
+#options {
+  padding: 16px;
+  padding-top: 60px;
+  display: grid;
+  grid-template-columns: 1;
+  gap: 8px;
+}
+#options h1 {
+  text-align: left;
+  width: 80%;
+}
+#options .feature h3, #options .feature h4 {
+  line-height: normal;
+  margin: 0;
+}
+
+#checkout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 16px;
+  padding-bottom: 54px;
+}
+#checkout form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  justify-items: center;
+  gap: 10%;
+  margin: 10%;
+}
+#checkout form input {
+  border-color: #357886;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 6px;
+  padding: 12px;
+  width: 100%;
+}
+#checkout form input::placeholder {
+  color: #1B4358;
+  font-family: Avenir;
+  font-weight: 100;
+  font-size: 14pt;
+  text-align: center;
+}
+#checkout #c2 > form {
+  grid-template-columns: 20% 20% 40%;
+}
+#checkout table {
+  margin: 10% 0%;
+  border-color: #357886;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 6px;
+  padding: 12px;
+  width: 100%;
+  padding: 0px;
+  font-weight: 200;
+  font-size: 14pt;
+}
+#checkout table tr {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 8px;
 }
 
 .thanks {

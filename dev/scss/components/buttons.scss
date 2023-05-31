@@ -30,16 +30,23 @@ a.button {
     @include button();
     }
 a.paypal {
-    padding: 10px 16px;
+    padding: 6px;
+    padding-bottom: 4px;
 border-radius: 6px;
 font-family: 'Avenir';
-font-size: 16pt;
+font-size: 14pt;
 font-weight: 200;
+line-height: 12px;
+width: 50%;
 text-decoration: none;
-background-color: $pp;
+background-color: $v5;
 color: $pt;
 border-style: solid;
-border-color: $pp;
+border-color: $pt;
+border-width: 2px;
+img{
+    height: 28px;
+}
         
         &:hover {
             background-color: $pp;
@@ -48,9 +55,8 @@ border-color: $pp;
             border-color: $pt;
         }
         &:active {
-            background-color: $pt;
-            color: $v5;
-            border-style: none;
+            background-color: $pp;
+            border-color: $pp;
     
         } 
 }
