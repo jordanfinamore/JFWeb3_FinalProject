@@ -66,6 +66,9 @@ h4{
     }
 }
 }
+/* big options */
+    /* The container */
+
 /* triangles */
 .rend{
     width: 0;
@@ -105,6 +108,9 @@ padding-left: 0px;
     border-radius: 6px;
     padding: 12px;
     width: 100%;
+    @include md{
+        padding: 16px;
+    }
 }
 @mixin placeholder {
     color: $p1;

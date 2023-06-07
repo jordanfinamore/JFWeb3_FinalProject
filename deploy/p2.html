@@ -22,24 +22,36 @@
         <!-- OPTIONS -->
     <section id="options">
         <h1>Choose the package that works for you.</h1>
+        <div id="ocontent">
         <div id="optall">
-    <div class="option"></div>
-    <div class="option"></div>
+    <label class="option" id="bo1">
+        <input type="radio" checked="checked" name="opt">
+    </label>
+    <label class="option" id="bo2">
+        <input type="radio" name="opt">
+    </label>
         </div>
-        <div class="opsmall">
+        <div id="opsmall">
     <div class="feature"><h3>Shark Stratos</h3><h3>Upright Vacuum</h3><div id="o1"></div></div>
     <div class="feature"><h4>Shark Stratos Upright Vacuum</h4><h3>+ TruePet® upgrade<br>and free Steam Mop</h3><div id="o2"></div></div>
         </div>
         <form id="shipping">
            <h2>Shipping options:</h2>
-           <input type="radio" id="standard" name="ships" value="standard">
-           <label for="standard">Standard (5-8 business days)</label>
-           <input type="radio" id="express" name="ships" value="express">
-           <label for="express">Express (2-5 business days)</label>
-           <input type="radio" id="amazon" name="ships" value="amazon">
-           <label for="amazon">One-day shipping with <img src="media/amazon.png" alt="amazon"></label>
+           <label class="container">
+            <input type="radio" checked="checked" name="radio">
+            <span class="checkmark">Standard (5-8 business days)</span>
+          </label>
+          <label class="container">
+            <input type="radio" name="radio">
+            <span class="checkmark">Express (2-5 business days)</span>
+          </label>
+          <label class="container">
+            <input type="radio" name="radio">
+            <span class="checkmark">One-day shipping with <img src="media/amazon.png" alt="amazon"></span>
+          </label>
         </form>
-        <a class="button" href="#checkout">Checkout</a>
+        <a class="button" href="#checkout" id="cbutton">Checkout</a>
+    </div>
     </section>
         <!-- CHECKOUT -->
     <section id="checkout">

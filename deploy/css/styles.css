@@ -149,6 +149,8 @@ interactive fields
   }
 }
 
+/* big options */
+/* The container */
 /* triangles */
 .rend {
   width: 0;
@@ -587,6 +589,30 @@ footer .ficons img {
   display: grid;
   grid-template-columns: 1;
   gap: 8px;
+  /* GRID AREAS*/
+  /* END GRID AREAS*/
+}
+#options #ocontent {
+  display: grid;
+  grid-template-columns: 2;
+  grid-template-areas: "all all" "small small" "ship check";
+}
+#options #ocontent #optall {
+  grid-area: all;
+}
+#options #ocontent #opsmall {
+  grid-area: small;
+}
+#options #ocontent #shipping {
+  grid-area: ship;
+}
+#options #ocontent #cbutton {
+  grid-area: check;
+}
+@media (min-width: 800px) {
+  #options #ocontent {
+    grid-template-areas: "all small" "all ship" "all check";
+  }
 }
 #options h1 {
   text-align: left;
@@ -596,13 +622,36 @@ footer .ficons img {
   line-height: normal;
   margin: 0;
 }
-#options form label {
+#options form .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+#options form .checkmark {
+  list-style-type: none;
   border-color: #357886;
   border-style: solid;
   border-width: 2px;
   border-radius: 6px;
   padding: 12px;
   width: 100%;
+}
+@media (min-width: 800px) {
+  #options form .checkmark {
+    padding: 16px;
+  }
+}
+#options form .checkmark img {
+  height: 18px;
+  margin-bottom: -8px;
+}
+#options form .container input:checked ~ .checkmark {
+  background-color: #357886;
+  border-color: #1B4358;
+  color: #FEFEFE;
+}
+#options .button {
+  width: fit-content;
 }
 
 #checkout {
@@ -611,6 +660,23 @@ footer .ficons img {
   justify-content: center;
   padding: 16px;
   padding-bottom: 54px;
+}
+#checkout h2 {
+  margin: 0px;
+  text-align: left;
+  margin-bottom: -24px;
+}
+@media (min-width: 800px) {
+  #checkout h2 {
+    margin-left: 48px;
+    margin-bottom: -36px;
+  }
+}
+@media (min-width: 1440px) {
+  #checkout h2 {
+    margin-left: 84px;
+    margin-bottom: -64px;
+  }
 }
 #checkout form {
   display: grid;
@@ -628,6 +694,11 @@ footer .ficons img {
   padding: 12px;
   width: 100%;
 }
+@media (min-width: 800px) {
+  #checkout form input {
+    padding: 16px;
+  }
+}
 #checkout form input::placeholder {
   color: #1B4358;
   font-family: Avenir;
@@ -637,6 +708,12 @@ footer .ficons img {
 }
 #checkout #c2 > form {
   grid-template-columns: 20% 20% 40%;
+}
+@media (min-width: 1440px) {
+  #checkout #c2 > form {
+    grid-template-columns: 25% 25% 40%;
+    gap: 5%;
+  }
 }
 #checkout table {
   margin: 10% 0%;
@@ -650,11 +727,27 @@ footer .ficons img {
   font-weight: 200;
   font-size: 14pt;
 }
+@media (min-width: 800px) {
+  #checkout table {
+    padding: 16px;
+  }
+}
 #checkout table tr {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 8px;
+}
+@media (min-width: 1440px) {
+  #checkout table {
+    width: 60%;
+    margin: 0% 20%;
+  }
+}
+@media (min-width: 1440px) {
+  #checkout .button {
+    margin-top: 48px;
+  }
 }
 
 .thanks {

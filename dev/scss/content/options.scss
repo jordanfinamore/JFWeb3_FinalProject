@@ -4,6 +4,37 @@
     display: grid;
     grid-template-columns: 1;
     gap: 8px;
+    /* GRID AREAS*/
+
+#ocontent {
+    #optall {
+        grid-area: all;
+    }
+    #opsmall {
+        grid-area: small;
+    }
+    #shipping {
+        grid-area: ship;
+    }
+    #cbutton {
+        grid-area: check;
+    }
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-areas: 
+    "all all"
+    "small small"
+    "ship check";
+    @include md {
+     grid-template-areas: 
+    "all small"
+    "all ship"
+    "all check";
+    }
+}
+
+     /* END GRID AREAS*/
+
     h1{
         text-align: left;
         width: 80%;
@@ -15,8 +46,27 @@
         }
     }
     form{
-        label {
+        .container input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+          }
+        .checkmark{
+            list-style-type: none;
             @include formfill();
+            img {
+                height: 18px;
+                margin-bottom: -8px;
+            }
         }
+        .container input:checked ~ .checkmark {
+            background-color: $p2;
+            border-color: $p1;
+            color: $v5;
+          }
+          
+    }
+    .button {
+        width: fit-content;
     }
 }

@@ -4,6 +4,19 @@
     justify-content: center;
     padding: 16px;
     padding-bottom: 54px;
+    h2{
+        margin: 0px;
+        text-align: left;
+        margin-bottom: -24px;
+        @include md {
+            margin-left: 48px;
+         margin-bottom: -36px;
+        }
+        @include lg {
+            margin-left: 84px;
+            margin-bottom: -64px;
+        }
+    }
     form {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -20,6 +33,10 @@
     }
     #c2>form {
         grid-template-columns: 20% 20% 40%;
+        @include lg {
+        grid-template-columns: 25% 25% 40%;
+            gap: 5%;
+        }
     }
     
 table {
@@ -34,5 +51,14 @@ table {
         justify-content: space-between;
         padding: 8px;
      }
+     @include lg {
+        width: 60%;
+        margin: 0% 20%;
+     }
 }
+.button {
+    @include lg{
+    margin-top: 48px;
+    }
+ }
 }
