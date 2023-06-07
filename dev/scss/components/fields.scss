@@ -67,7 +67,73 @@ h4{
 }
 }
 /* big options */
-    /* The container */
+.option {
+    display: inline;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom:12px;
+    width: 179px;
+    height: 382px;
+    @include md {
+        width: 358px;
+        height: 763px;  
+    }
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+  .option input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 179px;
+    height: 382px;
+    @include md {
+        width: 358px;
+        height: 763px;  
+    }
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+      border-color: #fff;
+    border-style: solid;
+    border-width: 6px;
+  }
+  #bo1{
+    background-image: url("../media/option1.png");
+}
+#bo2{
+    background-image: url("../media/option2.png");
+}
+  
+  /* When the radio button is checked, add a background */
+  .option input:checked ~ .select {
+    border-color: $p2;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .select:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .option input:checked ~ .select:after {
+    display: block;
+  }
 
 /* triangles */
 .rend{
@@ -117,5 +183,5 @@ padding-left: 0px;
     font-family: Avenir;
     font-weight: 100;
     font-size: 14pt;
-    text-align: center;
+    text-align: left;
     }

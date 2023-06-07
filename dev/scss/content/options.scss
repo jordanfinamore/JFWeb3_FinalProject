@@ -7,20 +7,9 @@
     /* GRID AREAS*/
 
 #ocontent {
-    #optall {
-        grid-area: all;
-    }
-    #opsmall {
-        grid-area: small;
-    }
-    #shipping {
-        grid-area: ship;
-    }
-    #cbutton {
-        grid-area: check;
-    }
     display: grid;
-    grid-template-columns: 2;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
     grid-template-areas: 
     "all all"
     "small small"
@@ -31,6 +20,30 @@
     "all ship"
     "all check";
     }
+    #optall {
+        grid-area: all;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    #opsmall {
+        grid-area: small;
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+        justify-content: center;
+    }
+    #shipping {
+        grid-area: ship;
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+    }
+    #cbutton {
+        grid-area: check;
+        height: fit-content;
+        margin: 48px;
+    }
 }
 
      /* END GRID AREAS*/
@@ -39,10 +52,38 @@
         text-align: left;
         width: 80%;
     }
-    .feature {
-        h3, h4{
+        .feature {
+            width: 40%;
+            height: 95%;
+            #extra {
+                margin: 16px 0px;
+            }
+            >div{
+                height: 98px;
+            }
+        h3{
             line-height: normal;
-            margin: 0;
+            margin: 6px;
+        }
+        h4 {
+            line-height: 0%;
+            margin-top: 12px; 
+            margin-bottom: 8px;
+        }
+        @include md{
+            width: 422px;
+            height: 289px;  
+            border-radius: 25px;
+            h3{
+                font-size: 32pt;
+            }
+            h4{
+                font-size: 16pt;
+            }
+            >div{
+                border-radius: 0px 0px 25px 25px;
+                height: 163px;
+            }
         }
     }
     form{

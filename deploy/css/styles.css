@@ -150,7 +150,80 @@ interactive fields
 }
 
 /* big options */
-/* The container */
+.option {
+  display: inline;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  width: 179px;
+  height: 382px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+@media (min-width: 800px) {
+  .option {
+    width: 358px;
+    height: 763px;
+  }
+}
+
+/* Hide the browser's default radio button */
+.option input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 179px;
+  height: 382px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 6px;
+}
+@media (min-width: 800px) {
+  .select {
+    width: 358px;
+    height: 763px;
+  }
+}
+
+#bo1 {
+  background-image: url("../media/option1.png");
+}
+
+#bo2 {
+  background-image: url("../media/option2.png");
+}
+
+/* When the radio button is checked, add a background */
+.option input:checked ~ .select {
+  border-color: #357886;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.select:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.option input:checked ~ .select:after {
+  display: block;
+}
+
 /* triangles */
 .rend {
   width: 0;
@@ -197,6 +270,7 @@ header {
   height: 52px;
   width: 100%;
   position: fixed;
+  z-index: 5;
 }
 header ul {
   list-style: none;
@@ -594,33 +668,78 @@ footer .ficons img {
 }
 #options #ocontent {
   display: grid;
-  grid-template-columns: 2;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
   grid-template-areas: "all all" "small small" "ship check";
-}
-#options #ocontent #optall {
-  grid-area: all;
-}
-#options #ocontent #opsmall {
-  grid-area: small;
-}
-#options #ocontent #shipping {
-  grid-area: ship;
-}
-#options #ocontent #cbutton {
-  grid-area: check;
 }
 @media (min-width: 800px) {
   #options #ocontent {
     grid-template-areas: "all small" "all ship" "all check";
   }
 }
+#options #ocontent #optall {
+  grid-area: all;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#options #ocontent #opsmall {
+  grid-area: small;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  justify-content: center;
+}
+#options #ocontent #shipping {
+  grid-area: ship;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+#options #ocontent #cbutton {
+  grid-area: check;
+  height: fit-content;
+  margin: 48px;
+}
 #options h1 {
   text-align: left;
   width: 80%;
 }
-#options .feature h3, #options .feature h4 {
+#options .feature {
+  width: 40%;
+  height: 95%;
+}
+#options .feature #extra {
+  margin: 16px 0px;
+}
+#options .feature > div {
+  height: 98px;
+}
+#options .feature h3 {
   line-height: normal;
-  margin: 0;
+  margin: 6px;
+}
+#options .feature h4 {
+  line-height: 0%;
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+@media (min-width: 800px) {
+  #options .feature {
+    width: 422px;
+    height: 289px;
+    border-radius: 25px;
+  }
+  #options .feature h3 {
+    font-size: 32pt;
+  }
+  #options .feature h4 {
+    font-size: 16pt;
+  }
+  #options .feature > div {
+    border-radius: 0px 0px 25px 25px;
+    height: 163px;
+  }
 }
 #options form .container input {
   position: absolute;
@@ -704,7 +823,7 @@ footer .ficons img {
   font-family: Avenir;
   font-weight: 100;
   font-size: 14pt;
-  text-align: center;
+  text-align: left;
 }
 #checkout #c2 > form {
   grid-template-columns: 20% 20% 40%;
