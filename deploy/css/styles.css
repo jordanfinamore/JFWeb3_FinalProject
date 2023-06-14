@@ -166,6 +166,12 @@ interactive fields
 }
 @media (min-width: 800px) {
   .option {
+    width: 179px;
+    height: 382px;
+  }
+}
+@media (min-width: 1440px) {
+  .option {
     width: 358px;
     height: 763px;
   }
@@ -670,11 +676,19 @@ footer .ficons img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 48px;
+  margin-bottom: 240px;
   grid-template-areas: "all all" "small small" "ship check";
 }
 @media (min-width: 800px) {
   #options #ocontent {
+    grid-template-columns: 30% 1fr;
     grid-template-areas: "all small" "all ship" "all check";
+  }
+}
+@media (min-width: 1440px) {
+  #options #ocontent {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "all small small" "all ship check";
   }
 }
 #options #ocontent #optall {
@@ -700,6 +714,8 @@ footer .ficons img {
   grid-area: check;
   height: fit-content;
   margin: 48px;
+  margin-top: 148px;
+  justify-self: center;
 }
 #options h1 {
   text-align: left;
@@ -726,6 +742,23 @@ footer .ficons img {
 }
 @media (min-width: 800px) {
   #options .feature {
+    width: 253px;
+    height: 173px;
+    border-radius: 15px;
+  }
+  #options .feature h3 {
+    font-size: 18pt;
+  }
+  #options .feature h4 {
+    font-size: 12pt;
+  }
+  #options .feature > div {
+    border-radius: 0px 0px 15px 15px;
+    height: 100%;
+  }
+}
+@media (min-width: 1440px) {
+  #options .feature {
     width: 422px;
     height: 289px;
     border-radius: 25px;
@@ -744,6 +777,7 @@ footer .ficons img {
 #options form .container input {
   position: absolute;
   opacity: 0;
+  width: 100%;
   cursor: pointer;
 }
 #options form .checkmark {
@@ -764,6 +798,9 @@ footer .ficons img {
   height: 18px;
   margin-bottom: -8px;
 }
+#options form #amazon {
+  padding: 12px 6px;
+}
 #options form .container input:checked ~ .checkmark {
   background-color: #357886;
   border-color: #1B4358;
@@ -779,6 +816,7 @@ footer .ficons img {
   justify-content: center;
   padding: 16px;
   padding-bottom: 54px;
+  padding-top: 120px;
 }
 #checkout h2 {
   margin: 0px;

@@ -10,16 +10,24 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 48px;
+    margin-bottom: 240px;
     grid-template-areas: 
     "all all"
     "small small"
     "ship check";
     @include md {
+    grid-template-columns: 30% 1fr;
      grid-template-areas: 
     "all small"
     "all ship"
     "all check";
     }
+    @include lg {
+        grid-template-columns: 1fr 1fr 1fr;
+         grid-template-areas: 
+        "all small small"
+        "all ship check";
+        }
     #optall {
         grid-area: all;
         display: flex;
@@ -43,6 +51,8 @@
         grid-area: check;
         height: fit-content;
         margin: 48px;
+        margin-top: 148px;
+        justify-self: center;
     }
 }
 
@@ -70,7 +80,22 @@
             margin-top: 12px; 
             margin-bottom: 8px;
         }
-        @include md{
+        @include md {
+            width: 253px;
+            height: 173px;  
+            border-radius: 15px;
+            h3{
+                font-size: 18pt;
+            }
+            h4{
+                font-size: 12pt;
+            }
+            >div{
+                border-radius: 0px 0px 15px 15px;
+                height: 100%;
+            }
+        }
+        @include lg{
             width: 422px;
             height: 289px;  
             border-radius: 25px;
@@ -90,6 +115,7 @@
         .container input {
             position: absolute;
             opacity: 0;
+            width: 100%;
             cursor: pointer;
           }
         .checkmark{
@@ -99,6 +125,9 @@
                 height: 18px;
                 margin-bottom: -8px;
             }
+        }
+        #amazon {
+            padding: 12px 6px;
         }
         .container input:checked ~ .checkmark {
             background-color: $p2;

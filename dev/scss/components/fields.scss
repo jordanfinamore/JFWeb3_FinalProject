@@ -75,9 +75,14 @@ h4{
     width: 179px;
     height: 382px;
     @include md {
+        width: 179px;
+        height: 382px;
+    }
+    @include lg {
         width: 358px;
         height: 763px;  
     }
+
     cursor: pointer;
     font-size: 22px;
     -webkit-user-select: none;
