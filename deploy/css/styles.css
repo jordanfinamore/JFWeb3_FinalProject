@@ -166,8 +166,7 @@ interactive fields
 }
 @media (min-width: 800px) {
   .option {
-    width: 179px;
-    height: 382px;
+    height: auto;
   }
 }
 @media (min-width: 1440px) {
